@@ -5,11 +5,11 @@ namespace AbstractController.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly HomeControllerBase _homeControllerBase;
+    private readonly HomeBaseController _homeControllerBase;
 
     public HomeController(IRoleFactory roleFactory)
     {
-        _homeControllerBase = roleFactory.CreateController("user"); // admin or user
+        _homeControllerBase = roleFactory.CreateController("admin"); // admin or user
     }
 
     public ActionResult Index()

@@ -4,7 +4,7 @@ namespace AbstractController.RolesFactory;
 
 public interface IRoleFactory
 {
-    HomeControllerBase CreateController(string role);
+    HomeBaseController CreateController(string role);
 }
 
 public class RoleFactory : IRoleFactory
@@ -15,12 +15,12 @@ public class RoleFactory : IRoleFactory
     {
         _serviceProvider = serviceProvider;
     }
-    public HomeControllerBase CreateController(string role)
+    public HomeBaseController CreateController(string role)
     {
         return role switch
         {
-            "admin" => _serviceProvider.GetService<HomeControllerAdmin>(),
-            "user" => _serviceProvider.GetService<HomeControllerUser>()
+            "admin" => _serviceProvider.GetService<HomeAdminController>(),
+            "user" => _serviceProvider.GetService<HomeUserController>()
         };
     }
 }

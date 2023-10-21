@@ -15,6 +15,7 @@
 
     <ItemGroup>
       <Folder Include="Properties\Controllers\" />
+      <Folder Include="Views\Shared\" />
     </ItemGroup>
 
     <ItemGroup>

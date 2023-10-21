@@ -2,7 +2,7 @@
 
 namespace AbstractController.Controllers;
 
-public abstract class HomeControllerBase: Controller
+public abstract class HomeBaseController: Controller
 {
     public virtual ActionResult Index()
     {

@@ -3,17 +3,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 namespace AbstractController.Controllers;
 
-public class HomeControllerAdmin : HomeControllerBase
+public class HomeAdminController : HomeBaseController
 {
     private readonly Db _db;
 
-    public HomeControllerAdmin(Db db)
+    public HomeAdminController(Db db)
     {
         _db = db;
     }
     public override ActionResult Index()
     {
         var a = _db.Users.Count();
-        return View("Index");
+        return View("HomeBase/Index");
     }
 }

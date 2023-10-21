@@ -2,6 +2,6 @@
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 namespace AbstractController.Controllers;
 
-public class HomeControllerUser : HomeControllerBase
+public class HomeUserController : HomeBaseController
 {
 }
