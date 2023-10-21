@@ -1,6 +1,11 @@
-﻿namespace AbstractController.Controllers;
+﻿using Microsoft.AspNetCore.Mvc;
 
-public class HomeControllerBase
+namespace AbstractController.Controllers;
+
+public abstract class HomeControllerBase: Controller
 {
-    
+    public virtual ActionResult Index()
+    {
+        return Forbid();
+    }
 }

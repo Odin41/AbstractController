@@ -1,6 +1,6 @@
-﻿namespace AbstractController.Properties.Models.User;
+﻿namespace AbstractController.Properties.Models.UserModels;
 
-public class User
+public class User: BaseEntity
 {
-    
+    public string Name { get; set; }
 }
